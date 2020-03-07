@@ -1,0 +1,32 @@
+{
+  "name": "news-api",
+  "version": "0.0.1",
+  "description": "news api system",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "main": "index.js",
+  "keywords": [
+    "news",
+    "api",
+    "system"
+  ],
+  "author": "PA",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.8.11",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "standard": "11.0.1",
+    "validator": "10.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
