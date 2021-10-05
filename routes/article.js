@@ -36,7 +36,7 @@ router.get('/', (req,res) => {
     }
 })
 
-router.post('/create', (req, res) => {
+router.post('/', (req, res) => {
     const body = req.body;
     // if all request bodies are valid and user doesn't send wrong input
     Article.create(body)    
@@ -44,14 +44,14 @@ router.post('/create', (req, res) => {
     .catch((error) => res.status(400).json(error.message));
 })
 
-router.patch('/edit/:id', (req, res) => {
+router.patch('/:id', (req, res) => {
     const body = req.body;
     Article.findOneAndUpdate( {_id: req.params.id}, body)
     .then(updated => res.status(200).json({ message: 'Article updated', article: updated }))
     .catch(error => res.status(400).json(error.message));
 })
 
-router.delete('/remove/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
     const id = req.params.id;
     Article.findByIdAndDelete(id)
     .then(() => res.status(200).json({ message: 'Articled deleted successfully!' }))
